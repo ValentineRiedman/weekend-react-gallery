@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList( props ){
 
@@ -8,6 +9,7 @@ function GalleryList( props ){
         <div>
             <h2>GalleryList</h2>
             <p>Props: {JSON.stringify( props )}</p>
+            <GalleryItem />
         </div>
     );
 };
