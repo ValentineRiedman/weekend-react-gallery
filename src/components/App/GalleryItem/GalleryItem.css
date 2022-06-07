@@ -1,0 +1,8 @@
+.photo{
+    border-style: solid;
+    border-color: black;
+    padding: 9px;
+    float: left;
+    border-width: 9px;
+    margin: 6px;
+}

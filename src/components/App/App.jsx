@@ -8,7 +8,6 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <img src="images/solid_gold_date.jpg"/>
         <Body />
 
       </div>

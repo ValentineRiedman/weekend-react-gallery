@@ -1,13 +1,22 @@
 import { useState } from "react";
+import './GalleryItem.css';
 
 function GalleryItem( props ){
 
-    const [ hook, setHook ] = useState( null );
+    const [ show, setShow ] = useState( false );
+
+    const toggleShow = () =>{
+        setShow( !show );
+    }
 
     return(
-        <div>
-            <h2>GalleryItem</h2>
-            <p>Props: {JSON.stringify( props )}</p>
+        <div onClick= { toggleShow } className='photo'>
+            {
+                show?
+                <h2>{props.photo.description} <button>Like</button></h2>
+                :
+                <img src= {props.photo.path}/>
+            }
         </div>
     );
 };
