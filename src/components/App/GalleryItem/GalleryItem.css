@@ -2,7 +2,11 @@
     border-style: solid;
     border-color: black;
     padding: 9px;
-    float: left;
+    float: center;
     border-width: 9px;
-    margin: 6px;
+    margin: 10px;
+}
+
+.description{
+    opacity: 10%;
 }
