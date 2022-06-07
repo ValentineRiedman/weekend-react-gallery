@@ -28,7 +28,7 @@ function GalleryItem( props ){
         <div onClick= { toggleShow } className='photo'>
             {
                 show?
-                <h2><img className="description"src= {props.photo.path}/> {props.photo.description} 
+                <h2> {props.photo.description} 
                 </h2>
                 :
                 <img src= {props.photo.path}/>
