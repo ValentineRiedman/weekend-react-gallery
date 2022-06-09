@@ -7,16 +7,16 @@ import './GalleryItem.css';
 function GalleryItem( props ){
 
     const [ show, setShow ] = useState( false );
-    const [ clicks, setClicks ] = useState( 0 );
 
-    const handleClick = ()=>{
-        setClicks( clicks +1 );
-        axios.put('/gallery/like/:id').then( ( response )=>{
-            console.log( response.data );
+    const likePhoto = ()=>{
+        let likedClick = props.photo.id;
+        axios.put('/gallery/like/'+likedClick).then( ( response )=>{
+            console.log( 'response.data:', response.data );
+            props.getPhotos();
         }).catch( ( err ) =>{
             console.log( err );
             alert( 'error getting likes' );
-        })
+        });
     }
 
 
@@ -25,6 +25,7 @@ function GalleryItem( props ){
     }
 
     return(
+        <div>
         <div onClick= { toggleShow } className='photo'>
             {
                 show?
@@ -33,7 +34,9 @@ function GalleryItem( props ){
                 :
                 <img src= {props.photo.path}/>
             }
-            <h5><button onClick={ handleClick }>Like</button>Likes:{ clicks }</h5>
+        </div>    
+            <button id={props.photo.id } onClick={likePhoto}>Like</button>
+            <p>Likes: { props.photo.likes }</p>
         </div>
         
     );

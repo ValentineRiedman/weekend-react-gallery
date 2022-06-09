@@ -7,7 +7,7 @@ function GalleryList( props ){
 
     return(
         <div>
-            {props.photoArray.map( photo=>(<GalleryItem photo={photo}/>))}
+            {props.photoArray.map( photo=>(<GalleryItem photo={photo} getPhotos={props.getPhotos}/>))}
         </div>
     );
 };

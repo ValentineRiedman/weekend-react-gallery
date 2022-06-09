@@ -18,7 +18,7 @@ function Body( props ){
     }
     return(
         <div>
-            <GalleryList photoArray={ photos } />
+            <GalleryList photoArray={ photos } getPhotos= { getPhotos } />
         </div>
     );
 };

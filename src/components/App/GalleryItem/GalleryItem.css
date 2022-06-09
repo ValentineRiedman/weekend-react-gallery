@@ -5,8 +5,12 @@
     float: center;
     border-width: 9px;
     margin: 10px;
+    height:500px;
+    width:450
 }
 
 .description{
     opacity: 10%;
+    height:500px;
+    width:450
 }
